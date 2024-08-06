@@ -1,0 +1,2 @@
+# Este es el comando que se debe correr para crear el modelo personalizado
+ollama create risk_analizer_3.1 -f risk_description_llama3-1

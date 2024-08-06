@@ -1,0 +1,12 @@
+FROM llama3.1
+
+# Es el valor de la temperatura de muestreo, entre 0 y 1. Valores más altos como 0.8 harán que la salida sea más aleatoria, mientras que valores más bajos como 0.2 la harán más enfocada y determinista. Si se establece en 0, el modelo usará la probabilidad logarítmica para aumentar automáticamente la temperatura hasta que se alcancen ciertos umbrales.
+PARAMETER temperature 0.1
+
+# Establece el tamaño del contexto de la conversación. Un valor más alto dará respuestas más largas y detalladas.
+#PARAMETER num_ctx 4096
+
+# Establece el mensaje del sistema personalizado para especificar el comportamiento del asistente de chat
+SYSTEM Necesito ayuda para clasificar riesgos basados en una descripción. El texto esperado de salida solamente es el nombre de la categoria sin nada mas. Las posibles categorias son: "Riesgo administrativo", "Riesgo ético", "Riesgo tecnológico", "Riesgo operativo", "Riesgo financiero", "Riesgo crítico", "Riesgo de seguridad", "Riesgo de información", "Riesgo psicológico", "Riesgo regulatorio". 
+
+
